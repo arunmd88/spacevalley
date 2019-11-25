@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>SPACEVALLEY.com</title>
+<link rel="icon" type="image/ico" href="img/logo_title.png">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/style1.css">
+<link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+<div class="topnav" id="myTopnav">
+  <a href="#home" class="active"><img src="img/logowtext_header.png" class="logo"/>SPACEVALLEY.com</a>
+  <a href="#news">News</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">About</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+</header>
+<div class="content">
+<div class="search_form">
+<h3>SEARCH FOR HOMES</h3>
+<form class="example" action="/action_page.php">
+  <input type="text" placeholder="Search.." name="search">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+</div>
+<div class="slideshow">
+<h3 class="heading1">RECOMMENDED PROPERTIES</h3>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+  <!-- Full-width images with number and caption text -->
+  <div class="mySlides fade">
+    <div class="numbertext">P129</div>
+    <img src="img/project1.jpg" style="width:100%">
+    <div class="text">Salt Lake Valley, Mumbai</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">P462</div>
+    <img src="img/project2.jpg" style="width:100%">
+    <div class="text">Yamuna County, Gurugram</div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">P598</div>
+    <img src="img/project3.jpg" style="width:100%">
+    <div class="text">Royal Oasis Apartments, Chennai</div>
+  </div>
+
+  <!-- Next and previous buttons -->
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- The dots/circles -->
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+</div>
+
+<div class="team">
+<h3 class="heading1">FEATURED PROPERTIES</h3>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="img/property1.jpg" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>M1 Garden</h2>
+        <p class="title">by V Raj Group</p>
+        <p>1 RK, Studio, 1,2 BHK Apartment</p>
+        <p>Dwaraka East, Delhi</p>
+        <p><button class="button">Rs82L - Rs1.2Cr</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="img/property2.jpg" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Mount Square</h2>
+        <p class="title">by Mount Reality Pvt. Ltd.</p>
+        <p>1, 2, 2.5, 3 BHK Apartments, Residential Plots</p>
+        <p>Noida Sector-32, Delhi</p>
+        <p><button class="button">Rs10L - Rs27L</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="img/property3.jpg" alt="John" style="width:100%">
+      <div class="container">
+        <h2>Sky Avenue</h2>
+        <p class="title">Ishta Foundation</p>
+        <p>1 , 2, 3, 4, BHK Apartments</p>
+        <p>South Kailash, Delhi</p>
+        <p><button class="button">Rs46.5L - Rs1.6Cr</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div class="gallery_img">
+<h3 class="heading1">NEWS</h3>
+<div id="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_5terre.jpg">
+      <img src="img/news1.jpg" alt="Cinque Terre" width="600" height="400">
+    </a>
+    <div class="desc">Lorem ipsum dolor sit amet consectetur</div>
+  </div>
+</div>
+
+
+<div id="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_forest.jpg">
+      <img src="img/news2.jpg" alt="Forest" width="600" height="400">
+    </a>
+    <div class="desc">Ut enim ad minim veniam quis ipsum</div>
+  </div>
+</div>
+
+<div id="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_lights.jpg">
+      <img src="img/news3.jpg" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Duis aute irure dolor in reprehenderit</div>
+  </div>
+</div>
+
+<div id="responsive">
+  <div class="gallery">
+    <a target="_blank" href="img_mountains.jpg">
+      <img src="img/news4.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">Excepteur sint occaecat cupidatat</div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+</div>
+
+<div id="contact_form">
+
+<div class="container">
+  <div style="text-align:center">
+    <h3>CONTACT US</h3>
+    <p>Swing by for a cup of coffee, or leave us a message:</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <img src="img/map.jpg" style="width:100%">
+    </div>
+    <div class="column">
+      <form action="/action_page.php">
+        <label for="fname">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="country">Country</label>
+        <select id="country" name="country">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
+
+</div>
+
+</div>
+
+<footer class="footer-distributed">
+
+			<div class="footer-left">
+
+				<span><img src="img/logowtext_header.png" class="footer_logo"/></span>
+
+				<p class="footer-links">
+					<a href="#">Home</a>
+					·
+					<a href="#">Blog</a>
+					·
+					<a href="#">Pricing</a>
+					·
+					<a href="#">About</a>
+					·
+					<a href="#">Faq</a>
+					·
+					<a href="#">Contact</a>
+				</p>
+
+				<p class="footer-company-name">SPACEVALLEY &copy; 2019</p>
+			</div>
+
+			<div class="footer-center">
+
+				<div>
+					<i class="fa fa-map-marker"></i>
+					<p><span>21 Hyatt Agency Street</span> Delhi, India</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+91 888 123456</p>
+				</div>
+
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="mailto:support@company.com">support@spacevalley.com</a></p>
+				</div>
+
+			</div>
+
+			<div class="footer-right">
+
+				<p class="footer-company-about">
+					<span>About the company</span>
+					Lorem ipsum dolor sit amet, consectateur adispicing elit. Fusce euismod convallis velit, eu auctor lacus vehicula sit amet.
+				</p>
+
+				<div class="footer-icons">
+
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+
+				</div>
+
+			</div>
+
+		</footer>
+		
+</body>
+</html>
